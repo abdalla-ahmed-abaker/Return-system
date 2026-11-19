@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نظام العودة الطوعية للسودان — الخطوة الثانية</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <h1>
+    <span class="flag-strip"><span class="r"></span><span class="w"></span><span class="b"></span></span>
+    نظام العودة الطوعية للسودان
+  </h1>
+</div>
+
+<div class="container">
+  <div class="steps">
+    <div class="step-dot active">1</div>
+    <div class="step-line active"></div>
+    <div class="step-dot active">2</div>
+  </div>
+
+  <div class="card" id="formCard">
+    <h2 class="form-title">تفاصيل الرجوع</h2>
+    <p class="form-subtitle">الرجاء الإجابة عن الأسئلة التالية لإتمام تقديم الطلب.</p>
+
+    <form id="step2Form" novalidate>
+      <label for="return_reason">أسباب الرجوع <span class="req">*</span></label>
+      <textarea id="return_reason" placeholder="اكتب هنا الأسباب التي دفعتك لطلب العودة الطوعية إلى السودان..."></textarea>
+
+      <label>هل هذا الرجوع باختيارك؟ <span class="req">*</span></label>
+      <div class="choice-row">
+        <label class="choice-card yes"><input type="radio" name="is_voluntary" value="yes">نعم</label>
+        <label class="choice-card no"><input type="radio" name="is_voluntary" value="no">لا</label>
+      </div>
+
+      <div class="error-msg" id="errorBox"></div>
+
+      <div class="btn-row">
+        <button type="button" class="btn secondary" id="backBtn">→ رجوع</button>
+        <button type="submit" class="btn" id="submitBtn">إرسال</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card success-box" id="successCard" style="display:none;">
+    <div class="icon">✓</div>
+    <h2>تم إرسال طلبك بنجاح</h2>
+    <p>شكراً لك. تم استلام طلب العودة الطوعية الخاص بك، وسيتم مراجعته والتواصل معك في أقرب وقت ممكن.</p>
+    <a href="index.html" class="btn secondary" style="text-decoration:none;">تقديم طلب جديد</a>
+  </div>
+</div>
+
+<script src="js/db.js"></script>
+<script src="js/step2.js"></script>
+</body>
+</html>
